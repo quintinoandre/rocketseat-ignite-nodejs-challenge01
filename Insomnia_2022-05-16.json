@@ -1,0 +1,297 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-05-16T00:49:49.711Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_4cbc0033d49c47988caa2d1a432c5aa6",
+      "parentId": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "modified": 1652657706635,
+      "created": 1652641861816,
+      "url": "{{ _.baseURL }}/{{ _.resource_todos }}",
+      "name": "Create New Todo",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Nome da tarefa\",\n\t\"deadline\": \"2022-05-15\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e43442700d9645d3a433e90345a4f362"
+        },
+        {
+          "id": "pair_3be1c6db169346559efc1877812d9672",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "parentId": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "modified": 1652657697250,
+      "created": 1652640129878,
+      "name": "Todos",
+      "description": "",
+      "environment": { "resource_todos": "todos", "resource_done": "done" },
+      "environmentPropertyOrder": { "&": ["resource_todos", "resource_done"] },
+      "metaSortKey": 0,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "parentId": null,
+      "modified": 1652639699751,
+      "created": 1652639699751,
+      "name": "rocketseat-ignite-nodejs-challenge01",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_8c85218cf844413189ab6a4af9ab19da",
+      "parentId": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "modified": 1652657728670,
+      "created": 1652657689456,
+      "url": "{{ _.baseURL }}/{{ _.resource_todos }}/1ee967fc-b26e-4ba2-825f-fedbacb55ec6",
+      "name": "Delete Todo",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_239a63c0feab4bf8bcc9ca70f4de3f20",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_433e1090e9394fecbee5af6a568ad813",
+      "parentId": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "modified": 1652657704655,
+      "created": 1652656929157,
+      "url": "{{ _.baseURL }}/{{ _.resource_todos }}/1ee967fc-b26e-4ba2-825f-fedbacb55ec6/{{ _.resource_done }}",
+      "name": "Mark Todo as Done",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_d88bcd9275974ffaa672224c82a7b757",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3bc5871068fe46148e5d717b111df533",
+      "parentId": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "modified": 1652657736862,
+      "created": 1652640150670,
+      "url": "{{ _.baseURL }}/{{ _.resource_todos }}",
+      "name": "Search User Todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_f5c277cb6ae74afa8f314f0dd3875ed5",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        },
+        {
+          "id": "pair_2db6481442994b9c8d01c042359bae13",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 300,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_368689e89e164ccd9f3f8264ffad8fbc",
+      "parentId": "fld_bfac4e093a8c45769df2812cc3f458c8",
+      "modified": 1652657697261,
+      "created": 1652642245860,
+      "url": "{{ _.baseURL }}/{{ _.resource_todos }}/a05fb06d-0dd5-4cca-9d79-e491f81c9708",
+      "name": "Update Todo",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Nome da tarefa 3\",\n\t\"deadline\": \"2022-05-15\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_00d3ae584a7c46249e5d3a1087ef1039"
+        },
+        {
+          "id": "pair_e46a28d9cdac4ba19d09da7299c53057",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 400,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_11408f54367b4192a63528c37195d37c",
+      "parentId": "fld_9fc42bac0e4f4be2b337a0ec3e17a83d",
+      "modified": 1652658033408,
+      "created": 1652639764865,
+      "url": "{{ _.baseURL }}/{{ _.resource_users }}",
+      "name": "Create New User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"JohnDoe\",\n\t\"username\": \"user1\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_57b201d4e7f84ffa9d6e84b47c18999c"
+        },
+        {
+          "id": "pair_b5d3d7e6c491406895034f399819231d",
+          "name": "username",
+          "value": "user1",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 0,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9fc42bac0e4f4be2b337a0ec3e17a83d",
+      "parentId": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "modified": 1652657697250,
+      "created": 1652639753684,
+      "name": "Users",
+      "description": "",
+      "environment": { "resource_users": "users" },
+      "environmentPropertyOrder": { "&": ["resource_users"] },
+      "metaSortKey": 100,
+      "_type": "request_group"
+    },
+    {
+      "_id": "env_365f7a0d4cb7468958976181c89dfe8937677bda",
+      "parentId": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "modified": 1652639706608,
+      "created": 1652639699763,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1652639699764,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_365f7a0d4cb7468958976181c89dfe8937677bda",
+      "parentId": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "modified": 1652639699768,
+      "created": 1652639699768,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_aafbd49a0d0646ea94a0ee207f96b768",
+      "parentId": "wrk_6495dfbd96fd4f2e9264de87a5b80f9f",
+      "modified": 1652639699757,
+      "created": 1652639699757,
+      "fileName": "rocketseat-ignite-nodejs-challenge01",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_9ea43d676d234f6ab5dc65b1745ee3a3",
+      "parentId": "env_365f7a0d4cb7468958976181c89dfe8937677bda",
+      "modified": 1652639747286,
+      "created": 1652639708081,
+      "name": "development",
+      "data": { "baseURL": "http://localhost:3333" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1652639708081,
+      "_type": "environment"
+    }
+  ]
+}
